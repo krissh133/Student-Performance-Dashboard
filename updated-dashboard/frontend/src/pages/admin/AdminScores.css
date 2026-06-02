@@ -1,0 +1,22 @@
+.adm-select {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: 20px;
+  transition: all 0.2s;
+  font-family: var(--font-body);
+  cursor: pointer;
+}
+
+.adm-select:focus {
+  outline: none;
+  border-color: var(--accent-violet);
+  box-shadow: 0 0 0 3px rgba(124, 108, 252, 0.1);
+}
+
+.adm-select option {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}

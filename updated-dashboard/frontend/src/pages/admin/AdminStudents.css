@@ -1,0 +1,267 @@
+.adm-search {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 10px 16px;
+  border-radius: 20px;
+  width: 260px;
+  transition: all 0.2s;
+}
+
+.adm-search:focus { outline: none; border-color: var(--accent-violet); box-shadow: 0 0 0 3px rgba(124,108,252,0.1); }
+.adm-search::placeholder { color: var(--text-muted); }
+
+.stu-skeleton { display: flex; flex-direction: column; gap: 8px; }
+
+.stu-table-wrap {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  overflow: auto;
+}
+
+.stu-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.stu-table thead tr { border-bottom: 1px solid var(--border); }
+
+.stu-table th {
+  padding: 14px 16px;
+  text-align: left;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.stu-row { border-bottom: 1px solid var(--border); transition: background 0.15s; }
+.stu-row:last-child { border-bottom: none; }
+.stu-row:hover { background: var(--bg-card-hover); }
+.stu-table td { padding: 14px 16px; vertical-align: middle; }
+
+.stu-name-cell { display: flex; align-items: center; gap: 10px; }
+
+.stu-avatar {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-cyan));
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 11px;
+  color: white;
+  flex-shrink: 0;
+}
+
+.stu-name { font-weight: 600; color: var(--text-primary); }
+.stu-email { color: var(--text-secondary); font-size: 12px; }
+.stu-num { color: var(--text-secondary); font-family: var(--font-display); font-weight: 600; }
+
+.stu-courses { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+
+.stu-course-pill {
+  font-size: 10px;
+  padding: 2px 7px;
+  background: rgba(124,108,252,0.1);
+  border: 1px solid rgba(124,108,252,0.2);
+  border-radius: 10px;
+  color: var(--accent-violet);
+  white-space: nowrap;
+}
+
+.stu-course-more { font-size: 10px; color: var(--text-muted); }
+
+.stu-actions { display: flex; gap: 6px; }
+
+.stu-btn {
+  padding: 5px 12px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.stu-btn.view { background: rgba(0,212,255,0.1); color: var(--accent-cyan); border: 1px solid rgba(0,212,255,0.2); }
+.stu-btn.view:hover { background: rgba(0,212,255,0.2); }
+.stu-btn.edit { background: rgba(124,108,252,0.1); color: var(--accent-violet); border: 1px solid rgba(124,108,252,0.2); }
+.stu-btn.edit:hover { background: rgba(124,108,252,0.2); }
+.stu-btn.del { background: rgba(255,77,109,0.1); color: var(--accent-rose); border: 1px solid rgba(255,77,109,0.2); }
+.stu-btn.del:hover { background: rgba(255,77,109,0.2); }
+
+.stu-empty { text-align: center; padding: 48px; color: var(--text-muted); font-size: 14px; }
+
+/* Modal */
+.adm-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(4px);
+  z-index: 999;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+
+.adm-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  width: 100%;
+  max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+}
+
+.adm-modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 24px 28px 0;
+}
+
+.adm-modal-title {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.adm-modal-close {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  width: 32px; height: 32px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.2s;
+}
+
+.adm-modal-close:hover { background: var(--bg-card-hover); color: var(--text-primary); }
+
+.adm-modal-form { padding: 20px 28px 28px; display: flex; flex-direction: column; gap: 16px; }
+
+.adm-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+.adm-form-group { display: flex; flex-direction: column; gap: 6px; }
+
+.adm-form-group label { font-size: 12px; font-weight: 600; color: var(--text-secondary); }
+.adm-form-hint { color: var(--text-muted); font-weight: 400; }
+
+.adm-form-group input, .adm-form-group select, .adm-form-group textarea {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-primary);
+  font-size: 13px;
+  padding: 10px 14px;
+  border-radius: var(--radius-sm);
+  transition: all 0.2s;
+  font-family: var(--font-body);
+}
+
+.adm-form-group input:focus, .adm-form-group select:focus, .adm-form-group textarea:focus {
+  outline: none;
+  border-color: var(--accent-violet);
+  box-shadow: 0 0 0 3px rgba(124,108,252,0.1);
+}
+
+.adm-form-group input::placeholder, .adm-form-group textarea::placeholder { color: var(--text-muted); }
+
+.adm-form-group select option { background: var(--bg-secondary); }
+
+.adm-course-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.adm-course-chip {
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.adm-course-chip.selected {
+  background: rgba(124,108,252,0.15);
+  border-color: rgba(124,108,252,0.4);
+  color: var(--accent-violet);
+}
+
+.adm-course-chip:hover:not(.selected) { border-color: var(--border-light); color: var(--text-primary); }
+
+.adm-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border);
+}
+
+.adm-btn-cancel {
+  background: var(--bg-secondary);
+  color: var(--text-secondary);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid var(--border-light);
+  transition: all 0.2s;
+}
+
+.adm-btn-cancel:hover { color: var(--text-primary); }
+
+.adm-btn-save {
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-rose));
+  color: white;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  font-family: var(--font-display);
+  transition: opacity 0.2s;
+}
+
+.adm-btn-save:disabled { opacity: 0.6; cursor: not-allowed; }
+
+/* Confirm Modal */
+.adm-confirm-modal {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-xl);
+  padding: 36px 32px;
+  max-width: 380px;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+}
+
+.adm-confirm-icon { font-size: 36px; color: var(--accent-rose); }
+
+.adm-confirm-modal h3 {
+  font-family: var(--font-display);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.adm-confirm-modal p { font-size: 14px; color: var(--text-secondary); line-height: 1.6; }
+
+.adm-confirm-actions { display: flex; gap: 10px; margin-top: 8px; }
+
+.adm-btn-delete {
+  background: var(--accent-rose);
+  color: white;
+  padding: 10px 24px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: opacity 0.2s;
+}
+
+.adm-btn-delete:hover { opacity: 0.85; }

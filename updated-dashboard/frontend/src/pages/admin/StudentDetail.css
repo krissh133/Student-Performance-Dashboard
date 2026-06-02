@@ -1,0 +1,87 @@
+.sd-back-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--text-secondary);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.sd-back-btn:hover { color: var(--text-primary); border-color: var(--accent-violet); }
+
+.sd-avatar-lg {
+  width: 56px; height: 56px;
+  background: linear-gradient(135deg, var(--accent-violet), var(--accent-cyan));
+  border-radius: 14px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 20px;
+  color: white;
+}
+
+.sd-overview-grid {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 16px;
+}
+
+.sd-info-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.sd-info-list { display: flex; flex-direction: column; gap: 12px; }
+
+.sd-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.sd-info-row span:first-child { color: var(--text-muted); }
+.sd-info-row span:last-child { color: var(--text-primary); font-weight: 500; }
+
+.sd-courses-label { font-size: 12px; color: var(--text-muted); margin-bottom: 8px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+.sd-courses-grid { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.sd-stats-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.sd-mini-stat {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: flex-start;
+}
+
+.sd-mini-val {
+  font-family: var(--font-display);
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.sd-mini-label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.04em; }
+
+.sd-scores-table-wrap { overflow-x: auto; }
+
+@media (max-width: 900px) {
+  .sd-overview-grid { grid-template-columns: 1fr; }
+  .sd-stats-row { grid-template-columns: repeat(2, 1fr); }
+}
